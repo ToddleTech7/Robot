@@ -3,9 +3,14 @@ import threading
 import matplotlib.pyplot as plt
 import math    
 
+from serial.tools.list_ports import comports
+
+print("Listing available ports:\n")
+for port in comports():
+    print(f"Port: {port}")
 
 #change to our port
-ser = serial.Serial ("/dev/ttyUSB0", baudrate=230400)
+ser = serial.Serial("/dev/ttyUSB0", baudrate=230400)
 
 # draw results
 def draw():
@@ -30,7 +35,7 @@ for _ in range(360):
 # data grabber
 def grab_data():
     try:
-        unique_values = 0;
+        unique_values = 0
         distance_list = [None] * 360
         while unique_values < 360:
             result = ser.read(42)
@@ -62,7 +67,7 @@ def grab_data():
     except IndexError:
         ser.write(b'e')
         print('Stopped! Out of sync.')
-threading.Thread(target=draw).start() 
+threading.Thread(target=draw).start()
 
 # while 1:
 #     grab_data()
