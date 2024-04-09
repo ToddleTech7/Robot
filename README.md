@@ -25,6 +25,9 @@ The `lidar.py` file serves as a Python script to acquire lidar data. It is tailo
 #### Interface:
 
 - `get_lidar_data()`: Retrieves lidar data from the sensor.
+- `get_distance()`: Retrieves obstacle distance from the sensor.
+- 'map()': map the lidar data.
+
 
 ### obstacle_detection.py
 
