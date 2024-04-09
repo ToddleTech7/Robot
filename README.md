@@ -4,7 +4,7 @@ This project encompasses several fundamental modules:
 
 - **astar.py:** This module implements the A* algorithm for pathfinding.
 - **lidar.py:** Python script for retrieving lidar data.
-- **obstacle_detection.py:** Simple code for detecting obstacles.
+- **obstacle_detection.py:** code for detecting obstacles.
 - **basic.py:** Module for basic movement functionalities.
 - **location.py:** Module for robot localization in 3D space.
 
